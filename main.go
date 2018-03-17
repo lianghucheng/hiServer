@@ -1,7 +1,7 @@
 package main
 
 import (
-	_ "hiChangda/serve/routers"
+	_ "hiServer/routers"
 
 	"github.com/astaxie/beego"
 )

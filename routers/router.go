@@ -8,25 +8,12 @@
 package routers
 
 import (
-	"hiChangda/serve/controllers"
+	"hiServer/controllers"
 
 	"github.com/astaxie/beego"
 )
 
 func init() {
-	ns := beego.NewNamespace("/v1",
-		beego.NSNamespace("/object",
-			beego.NSInclude(
-				&controllers.ObjectController{},
-			),
-		),
-		beego.NSNamespace("/user",
-			beego.NSInclude(
-				&controllers.UserController{},
-			),
-		),
-	)
-	beego.Include(&controllers.CustomerController{})
+	beego.Include(&controllers.UserController{})
 	beego.Include(&controllers.ManagerController{})
-	beego.AddNamespace(ns)
 }

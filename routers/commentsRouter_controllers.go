@@ -7,47 +7,7 @@ import (
 
 func init() {
 
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"],
-		beego.ControllerComments{
-			Method: "Achieve",
-			Router: `/customer/community/achieve`,
-			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"],
-		beego.ControllerComments{
-			Method: "AutoPush",
-			Router: `/customer/community/autoPush`,
-			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"],
-		beego.ControllerComments{
-			Method: "CampusCard",
-			Router: `/customer/community/campusCard`,
-			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"],
-		beego.ControllerComments{
-			Method: "Course",
-			Router: `/customer/community/course`,
-			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"],
-		beego.ControllerComments{
-			Method: "Feedback",
-			Router: `/customer/community/feedback`,
-			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
 		beego.ControllerComments{
 			Method: "LostAndFound",
 			Router: `/customer/community/lostAndFound`,
@@ -55,7 +15,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
 		beego.ControllerComments{
 			Method: "Map",
 			Router: `/customer/community/map`,
@@ -63,15 +23,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"],
-		beego.ControllerComments{
-			Method: "MyPhoto",
-			Router: `/customer/community/myPhoto`,
-			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
 		beego.ControllerComments{
 			Method: "Notice",
 			Router: `/customer/community/notice`,
@@ -79,15 +31,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"],
-		beego.ControllerComments{
-			Method: "PersonMsg",
-			Router: `/customer/community/personMsg`,
-			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
 		beego.ControllerComments{
 			Method: "Photograph",
 			Router: `/customer/community/photograph`,
@@ -95,23 +39,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"],
-		beego.ControllerComments{
-			Method: "UnchTheClock",
-			Router: `/customer/community/punchTheClock`,
-			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"],
-		beego.ControllerComments{
-			Method: "Score",
-			Router: `/customer/community/score`,
-			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
 		beego.ControllerComments{
 			Method: "Secret",
 			Router: `/customer/community/secret`,
@@ -119,31 +47,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"],
-		beego.ControllerComments{
-			Method: "SelfStudyRoom",
-			Router: `/customer/community/selfStudyRoom`,
-			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"],
-		beego.ControllerComments{
-			Method: "Tag",
-			Router: `/customer/community/tag`,
-			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"],
-		beego.ControllerComments{
-			Method: "TeacherMsg",
-			Router: `/customer/community/teacherMsg`,
-			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
 		beego.ControllerComments{
 			Method: "TechNews",
 			Router: `/customer/community/techNews`,
@@ -151,7 +55,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
 		beego.ControllerComments{
 			Method: "TechQuestion",
 			Router: `/customer/community/techQuestion`,
@@ -159,7 +63,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
 		beego.ControllerComments{
 			Method: "Topic",
 			Router: `/customer/community/topic`,
@@ -167,7 +71,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
 		beego.ControllerComments{
 			Method: "Vote",
 			Router: `/customer/community/vote`,
@@ -175,7 +79,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
 		beego.ControllerComments{
 			Method: "Weather",
 			Router: `/customer/community/weather`,
@@ -183,106 +87,106 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+		beego.ControllerComments{
+			Method: "Achieve",
+			Router: `/customer/person/achieve`,
+			AllowHTTPMethods: []string{"get"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+		beego.ControllerComments{
+			Method: "Feedback",
+			Router: `/customer/person/feedback`,
+			AllowHTTPMethods: []string{"get"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+		beego.ControllerComments{
+			Method: "MyPhoto",
+			Router: `/customer/person/myPhoto`,
+			AllowHTTPMethods: []string{"get"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+		beego.ControllerComments{
+			Method: "PersonMsg",
+			Router: `/customer/person/personMsg`,
+			AllowHTTPMethods: []string{"get"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+		beego.ControllerComments{
+			Method: "UnchTheClock",
+			Router: `/customer/person/punchTheClock`,
+			AllowHTTPMethods: []string{"get"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+		beego.ControllerComments{
+			Method: "Tag",
+			Router: `/customer/person/tag`,
+			AllowHTTPMethods: []string{"get"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
 		beego.ControllerComments{
 			Method: "WinningLog",
-			Router: `/customer/community/winningLog`,
+			Router: `/customer/person/winningLog`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:ObjectController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:ObjectController"],
+	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
 		beego.ControllerComments{
-			Method: "Post",
-			Router: `/`,
-			AllowHTTPMethods: []string{"post"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:ObjectController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:ObjectController"],
-		beego.ControllerComments{
-			Method: "GetAll",
-			Router: `/`,
+			Method: "AutoPush",
+			Router: `/customer/serve/autoPush`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:ObjectController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:ObjectController"],
+	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
 		beego.ControllerComments{
-			Method: "Get",
-			Router: `/:objectId`,
+			Method: "CampusCard",
+			Router: `/customer/serve/campusCard`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:ObjectController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:ObjectController"],
+	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
 		beego.ControllerComments{
-			Method: "Put",
-			Router: `/:objectId`,
-			AllowHTTPMethods: []string{"put"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:ObjectController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:ObjectController"],
-		beego.ControllerComments{
-			Method: "Delete",
-			Router: `/:objectId`,
-			AllowHTTPMethods: []string{"delete"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:UserController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:UserController"],
-		beego.ControllerComments{
-			Method: "Post",
-			Router: `/`,
-			AllowHTTPMethods: []string{"post"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:UserController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:UserController"],
-		beego.ControllerComments{
-			Method: "GetAll",
-			Router: `/`,
+			Method: "Course",
+			Router: `/customer/serve/course`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:UserController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:UserController"],
+	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
 		beego.ControllerComments{
-			Method: "Get",
-			Router: `/:uid`,
+			Method: "Score",
+			Router: `/customer/serve/score`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:UserController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:UserController"],
+	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
 		beego.ControllerComments{
-			Method: "Put",
-			Router: `/:uid`,
-			AllowHTTPMethods: []string{"put"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:UserController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:UserController"],
-		beego.ControllerComments{
-			Method: "Delete",
-			Router: `/:uid`,
-			AllowHTTPMethods: []string{"delete"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:UserController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:UserController"],
-		beego.ControllerComments{
-			Method: "Login",
-			Router: `/login`,
+			Method: "SelfStudyRoom",
+			Router: `/customer/serve/selfStudyRoom`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiChangda/serve/controllers:UserController"] = append(beego.GlobalControllerRouter["hiChangda/serve/controllers:UserController"],
+	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
 		beego.ControllerComments{
-			Method: "Logout",
-			Router: `/logout`,
+			Method: "TeacherMsg",
+			Router: `/customer/serve/teacherMsg`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})

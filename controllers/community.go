@@ -1,76 +1,76 @@
 package controllers
 
 //技术咨讯
-//@router /customer/community/techNews
-func (customer *CustomerController)TechNews()  {
+//@router /user/community/techNews
+func (customer *UserController)TechNews()  {
 	//暂时无需逻辑
 	customer.Data["json"]="techNews"
 	customer.ServeJSON()
 }
 
 //校园地图
-//@router /customer/community/map
-func (customer *CustomerController)Map()  {
+//@router /user/community/map
+func (customer *UserController)Map()  {
 	//暂时无需逻辑
 	customer.Data["json"]="map"
 	customer.ServeJSON()
 }
 
 //天气
-//@router /customer/community/weather
-func (customer *CustomerController)Weather(){
+//@router /user/community/weather
+func (customer *UserController)Weather(){
 	customer.Data["json"]="weather"
 	customer.ServeJSON()
 }
 
 //失物招领
-//@router /customer/community/lostAndFound
-func (customer *CustomerController)LostAndFound(){
+//@router /user/community/lostAndFound
+func (customer *UserController)LostAndFound(){
 	customer.Data["json"]="lostAndFound"
 	customer.ServeJSON()
 }
 
 //投票
-//@router /customer/community/vote
-func (customer *CustomerController)Vote(){
+//@router /user/community/vote
+func (customer *UserController)Vote(){
 	//暂时不做
 	customer.Data["json"]="vote"
 	customer.ServeJSON()
 }
 
 //秘密墙
-//@router /customer/community/secret
-func (customer *CustomerController)Secret(){
+//@router /user/community/secret
+func (customer *UserController)Secret(){
 	customer.Data["json"]="secret"
 	customer.ServeJSON()
 }
 
 //近日话题
-//@router /customer/community/topic
-func (customer *CustomerController)Topic(){
+//@router /user/community/topic
+func (customer *UserController)Topic(){
 	customer.Data["json"]="topic"
 	customer.ServeJSON()
 }
 
 //技术问答
-//@router /customer/community/techQuestion
-func (customer *CustomerController)TechQuestion(){
+//@router /user/community/techQuestion
+func (customer *UserController)TechQuestion(){
 	customer.Data["json"]="techQuestion"
 	customer.ServeJSON()
 }
 
 
 //通知公告
-//@router /customer/community/notice
-func (customer *CustomerController)Notice(){
+//@router /user/community/notice
+func (customer *UserController)Notice(){
 	customer.Data["json"]="notice"
 	customer.ServeJSON()
 }
 
 
 //随拍
-//@router /customer/community/photograph
-func (customer *CustomerController)Photograph(){
+//@router /user/community/photograph
+func (customer *UserController)Photograph(){
 	customer.Data["json"]="notice"
 	customer.ServeJSON()
 }

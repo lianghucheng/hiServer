@@ -3,35 +3,35 @@ package controllers
 
 //课表
 //@router /customer/serve/course
-func (customer *CustomerController)Course()  {
+func (customer *UserController)Course()  {
 	customer.Data["json"]="course"
 	customer.ServeJSON()
 }
 
 //成绩
 //@router /customer/serve/score
-func (customer *CustomerController)Score()  {
+func (customer *UserController)Score()  {
 	customer.Data["json"]="score"
 	customer.ServeJSON()
 }
 
 //校园卡
-//@router /customer/serve/campusCard
-func (customer *CustomerController)CampusCard()  {
+//@router /user/serve/campusCard
+func (customer *UserController)CampusCard()  {
 	customer.Data["json"]="score"
 	customer.ServeJSON()
 }
 
 //空自习室
-//@router /customer/serve/selfStudyRoom
-func (customer *CustomerController)SelfStudyRoom()  {
+//@router /user/serve/selfStudyRoom
+func (customer *UserController)SelfStudyRoom()  {
 	customer.Data["json"]="selfStudyRoom"
 	customer.ServeJSON()
 }
 
 //教师查询
-//@router /customer/serve/teacherMsg
-func (customer *CustomerController)TeacherMsg()  {
+//@router /user/serve/teacherMsg
+func (customer *UserController)TeacherMsg()  {
 	customer.Data["json"]="teacherMsg"
 	customer.ServeJSON()
 }
@@ -40,8 +40,8 @@ func (customer *CustomerController)TeacherMsg()  {
 
 
 //开启推送
-//@router /customer/serve/autoPush
-func (customer *CustomerController)AutoPush()  {
+//@router /user/serve/autoPush
+func (customer *UserController)AutoPush()  {
 	customer.Data["json"]="autoPush"
 	customer.ServeJSON()
 }

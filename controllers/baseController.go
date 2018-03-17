@@ -6,7 +6,7 @@ type BaseController struct {
 	beego.Controller
 }
 
-type CustomerController struct {
+type UserController struct {
 	BaseController
 }
 
