@@ -2,38 +2,38 @@ package controllers
 
 
 //课表
-//@router /customer/serve/course
-func (customer *UserController)Course()  {
-	customer.Data["json"]="course"
-	customer.ServeJSON()
+//@router /user/serve/course
+func (user *UserController)Course()  {
+	user.Data["json"]="course"
+	user.ServeJSON()
 }
 
 //成绩
-//@router /customer/serve/score
-func (customer *UserController)Score()  {
-	customer.Data["json"]="score"
-	customer.ServeJSON()
+//@router /user/serve/score
+func (user *UserController)Score()  {
+	user.Data["json"]="score"
+	user.ServeJSON()
 }
 
 //校园卡
 //@router /user/serve/campusCard
-func (customer *UserController)CampusCard()  {
-	customer.Data["json"]="score"
-	customer.ServeJSON()
+func (user *UserController)CampusCard()  {
+	user.Data["json"]="score"
+	user.ServeJSON()
 }
 
 //空自习室
 //@router /user/serve/selfStudyRoom
-func (customer *UserController)SelfStudyRoom()  {
-	customer.Data["json"]="selfStudyRoom"
-	customer.ServeJSON()
+func (user *UserController)SelfStudyRoom()  {
+	user.Data["json"]="selfStudyRoom"
+	user.ServeJSON()
 }
 
 //教师查询
 //@router /user/serve/teacherMsg
-func (customer *UserController)TeacherMsg()  {
-	customer.Data["json"]="teacherMsg"
-	customer.ServeJSON()
+func (user *UserController)TeacherMsg()  {
+	user.Data["json"]="teacherMsg"
+	user.ServeJSON()
 }
 
 //普通话、四六级、计算机
@@ -41,7 +41,7 @@ func (customer *UserController)TeacherMsg()  {
 
 //开启推送
 //@router /user/serve/autoPush
-func (customer *UserController)AutoPush()  {
-	customer.Data["json"]="autoPush"
-	customer.ServeJSON()
+func (user *UserController)AutoPush()  {
+	user.Data["json"]="autoPush"
+	user.ServeJSON()
 }

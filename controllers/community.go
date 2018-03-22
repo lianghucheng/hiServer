@@ -54,23 +54,23 @@ func (customer *UserController)Topic(){
 
 //技术问答
 //@router /user/community/techQuestion
-func (customer *UserController)TechQuestion(){
-	customer.Data["json"]="techQuestion"
-	customer.ServeJSON()
+func (user *UserController)TechQuestion(){
+	user.Data["json"]="techQuestion"
+	user.ServeJSON()
 }
 
 
 //通知公告
 //@router /user/community/notice
-func (customer *UserController)Notice(){
-	customer.Data["json"]="notice"
-	customer.ServeJSON()
+func (user *UserController)Notice(){
+	user.Data["json"]="notice"
+	user.ServeJSON()
 }
 
 
 //随拍
 //@router /user/community/photograph
-func (customer *UserController)Photograph(){
-	customer.Data["json"]="notice"
-	customer.ServeJSON()
+func (user *UserController)Photograph(){
+	user.Data["json"]="notice"
+	user.ServeJSON()
 }

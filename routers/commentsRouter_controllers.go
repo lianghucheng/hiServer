@@ -7,186 +7,194 @@ import (
 
 func init() {
 
-	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
+		beego.ControllerComments{
+			Method: "EngineTest",
+			Router: `/engine/test`,
+			AllowHTTPMethods: []string{"*"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "LostAndFound",
-			Router: `/customer/community/lostAndFound`,
+			Router: `/user/community/lostAndFound`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Map",
-			Router: `/customer/community/map`,
+			Router: `/user/community/map`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Notice",
-			Router: `/customer/community/notice`,
+			Router: `/user/community/notice`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Photograph",
-			Router: `/customer/community/photograph`,
+			Router: `/user/community/photograph`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Secret",
-			Router: `/customer/community/secret`,
+			Router: `/user/community/secret`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "TechNews",
-			Router: `/customer/community/techNews`,
+			Router: `/user/community/techNews`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "TechQuestion",
-			Router: `/customer/community/techQuestion`,
+			Router: `/user/community/techQuestion`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Topic",
-			Router: `/customer/community/topic`,
+			Router: `/user/community/topic`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Vote",
-			Router: `/customer/community/vote`,
+			Router: `/user/community/vote`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Weather",
-			Router: `/customer/community/weather`,
+			Router: `/user/community/weather`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Achieve",
-			Router: `/customer/person/achieve`,
+			Router: `/user/person/achieve`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Feedback",
-			Router: `/customer/person/feedback`,
+			Router: `/user/person/feedback`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "MyPhoto",
-			Router: `/customer/person/myPhoto`,
+			Router: `/user/person/myPhoto`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "PersonMsg",
-			Router: `/customer/person/personMsg`,
+			Router: `/user/person/personMsg`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "UnchTheClock",
-			Router: `/customer/person/punchTheClock`,
+			Router: `/user/person/punchTheClock`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Tag",
-			Router: `/customer/person/tag`,
+			Router: `/user/person/tag`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "WinningLog",
-			Router: `/customer/person/winningLog`,
+			Router: `/user/person/winningLog`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "AutoPush",
-			Router: `/customer/serve/autoPush`,
+			Router: `/user/serve/autoPush`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "CampusCard",
-			Router: `/customer/serve/campusCard`,
+			Router: `/user/serve/campusCard`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Course",
-			Router: `/customer/serve/course`,
+			Router: `/user/serve/course`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Score",
-			Router: `/customer/serve/score`,
+			Router: `/user/serve/score`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "SelfStudyRoom",
-			Router: `/customer/serve/selfStudyRoom`,
+			Router: `/user/serve/selfStudyRoom`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["hiServer/controllers:CustomerController"] = append(beego.GlobalControllerRouter["hiServer/controllers:CustomerController"],
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "TeacherMsg",
-			Router: `/customer/serve/teacherMsg`,
+			Router: `/user/serve/teacherMsg`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
