@@ -2,7 +2,7 @@ package main
 
 import (
 	_ "hiServer/routers"
-
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/astaxie/beego"
 	"os"
 	"hiServer/models/base"

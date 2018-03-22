@@ -3,4 +3,6 @@ package models
 
 type WechatUser struct{
 	Id int64
+	OpenId string
+	User *User `orm:"reverse(one)"`
 }

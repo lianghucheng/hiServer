@@ -6,13 +6,42 @@ import (
 	"github.com/astaxie/beego"
 	"database/sql"
 	"log"
+	"hiServer/models"
 )
 
 var o orm.Ormer
 
 func init(){
 	orm.RegisterModel(
-
+		new(models.WechatUser),
+		new(models.User),
+		new(models.PersonMsg),
+		new(models.PunchTheClock),
+		new(models.Tag),
+		new(models.AchieveMsg),
+		new(models.WinningLog),
+		new(models.Feedback),
+		new(models.Course),
+		new(models.Score),
+		new(models.StuCard),
+		new(models.SelfStudyRoom),
+		new(models.Teacher),
+		new(models.LostAndFound),
+		new(models.Active),
+		new(models.JoinMsg),
+		new(models.Vote),
+		new(models.LuckDrawEvent),
+		new(models.LuckDrawItems),
+		new(models.LuckDrawDetail),
+		new(models.PattedWorks),
+		new(models.PattedWorksDraw),
+		new(models.Secret),
+		new(models.Topic),
+		new(models.TechQuestion),
+		new(models.SchoolOfficialWebMsg),
+		new(models.TechNews),
+		new(models.Comment),
+		new(models.Praise),
 	)
 }
 
@@ -50,7 +79,6 @@ func Syncdb(force bool){
 func createDb(db_name string,dns string){
 	var sqlstring string
 	//sql ="create database beego_test;"
-	beego.Debug("bbbb")
 	db,err:=sql.Open("mysql",dns)
 	if err!=nil{
 		panic(err.Error())

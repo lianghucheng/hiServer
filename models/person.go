@@ -4,41 +4,59 @@ package models
 //个人详情
 type PersonMsg struct{
 	Id int64
-	customer *Customer
+	StuName string `orm:"null"`
+	Nick string `orm:"null"`
+	Sex int `orm:"null"`
+	Phone string `orm:"null"`
+	Age string `orm:"null"`
+	Constellation string `orm:"null"`
+	Address string `orm:"null"`
+	PersonalitySignature string `orm:"null"`
+	Birth string `orm:"null"`
+	Email string `orm:"null"`
+	PunchTheClockNum string `orm:"null"`
+	Active int `orm:"null"`
+	Date string `orm:"null"`
+	User *User `orm:"rel(one)"`
 }
 
 //打卡记录
 type PunchTheClock struct{
 	Id int64
-	customer *Customer
+	Date string
+	User *User `orm:"rel(one)"`
 }
 
 //个人标签
 type Tag struct{
 	Id int64
-	customer *Customer
+	content string
+	Date string
+	User *User `orm:"rel(fk)"`
 }
 
-//个人成就
-type Achieve struct{
+//个人成就详情
+type AchieveMsg struct{
 	Id int64
-	customer *Customer
+	Content string `orm:"null"`
+	Date string
+	User *User `orm:"rel(fk)"`
 }
 
-//奖品记录
+//成就奖品记录
 type WinningLog struct{
 	Id int64
-	customer *Customer
+	Item string
+	Num int
+	Date string
+	User *User `orm:"rel(fk)"`
 }
 
 //反馈信息
 type Feedback struct{
 	Id int64
-	customer *Customer
+	Content string `orm:"type(text)"`
+	Date string
+	User *User `orm:"rel(fk)"`
 }
 
-//个人作品信息
-type MyPhoto struct{
-	Id int64
-	customer *Customer
-}
