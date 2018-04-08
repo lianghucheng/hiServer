@@ -1,8 +1,8 @@
 package engine
 
 import (
-	"lhc/crawler/fetcher"
 	"log"
+	"hiServer/fetcher"
 )
 
 type ConcurrentEngine struct{
@@ -11,30 +11,32 @@ type ConcurrentEngine struct{
 }
 
 type Scheduler interface{
-	Submit(RequestTest)
-	ConfigureMasterWorkerChan(chan RequestTest)
+	Submit(Request)
+	ConfigureMasterWorkerChan(chan Request)
 }
 
 
-func (e *ConcurrentEngine)Run(seeds ...RequestTest){
-	var requests []RequestTest
+func (e *ConcurrentEngine)Run(seeds ...Request){
+	var requests []Request
 	for _,r:=range seeds{
 		requests=append(requests,r)
 	}
-
 	for len(requests)>0{
 		r:=requests[0]
 		requests=requests[1:]
 
-		body,err:=fetcher.Fetch(r.UrlTest)
-		if err !=nil{
-			log.Printf("Fetcher: error "+"fetching url %s: %v",r.UrlTest,err)
-		}
 
-		parseResult:=r.ParserFuncTest(body)
-		requests=append(requests,parseResult.RequestTest...)
-		for _,item:=range parseResult.ItemsTest {
-			log.Printf("Got item %v", item)
-		}
+			body, err := fetcher.Fetch(r.Url)
+			if err != nil {
+				log.Printf("Fetcher: error "+"fetching url %s: %v", r.Url, err)
+			}
+
+			log.Printf("%s\n", body)
+			parseResult := r.ParserFunc(body)
+			requests = append(requests, parseResult.Requests...)
+			for _, item := range parseResult.Items {
+				log.Printf("Got item %v", item)
+			}
 	}
+	log.Println("run end")
 }

@@ -1,18 +1,12 @@
 package controllers
 
 import (
-	"hiServer/engine"
-	"hiServer/scheduler"
+	"hiServer/parser/ccsu"
 )
 
-//@router /engine/test [*]
+//@router /user/hiserver/engine/test [*]
 func (user *UserController)EngineTest(){
-	e:=engine.ConcurrentEngine{
-		Scheduler:&scheduler.Scheduler{},
-		WorkerCount:1,
-	}
-	e.Run(engine.RequestTest{
-		UrlTest:"",
-		ParserFuncTest:nil,
-	})
+	ccsu.Fectch("http://jwcxxcx.ccsu.cn/jwxt/Logon.do?method=logon","B20160304219","134531")
+	user.Data["json"]="success"
+	user.ServeJSON()
 }

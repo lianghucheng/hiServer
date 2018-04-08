@@ -9,16 +9,16 @@ func init() {
 
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
-			Method: "EngineTest",
-			Router: `/engine/test`,
-			AllowHTTPMethods: []string{"*"},
+			Method: "Achieve",
+			Router: `/user/hiserver//achieve`,
+			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "LostAndFound",
-			Router: `/user/community/lostAndFound`,
+			Router: `/user/hiserver/community/lostAndFound`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
@@ -26,7 +26,7 @@ func init() {
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Map",
-			Router: `/user/community/map`,
+			Router: `/user/hiserver/community/map`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
@@ -34,7 +34,7 @@ func init() {
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Notice",
-			Router: `/user/community/notice`,
+			Router: `/user/hiserver/community/notice`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
@@ -42,7 +42,7 @@ func init() {
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Photograph",
-			Router: `/user/community/photograph`,
+			Router: `/user/hiserver/community/photograph`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
@@ -50,7 +50,7 @@ func init() {
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Secret",
-			Router: `/user/community/secret`,
+			Router: `/user/hiserver/community/secret`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
@@ -58,7 +58,7 @@ func init() {
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "TechNews",
-			Router: `/user/community/techNews`,
+			Router: `/user/hiserver/community/techNews`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
@@ -66,7 +66,7 @@ func init() {
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "TechQuestion",
-			Router: `/user/community/techQuestion`,
+			Router: `/user/hiserver/community/techQuestion`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
@@ -74,7 +74,7 @@ func init() {
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Topic",
-			Router: `/user/community/topic`,
+			Router: `/user/hiserver/community/topic`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
@@ -82,7 +82,7 @@ func init() {
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Vote",
-			Router: `/user/community/vote`,
+			Router: `/user/hiserver/community/vote`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
@@ -90,23 +90,39 @@ func init() {
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Weather",
-			Router: `/user/community/weather`,
+			Router: `/user/hiserver/community/weather`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
-			Method: "Achieve",
-			Router: `/user/person/achieve`,
-			AllowHTTPMethods: []string{"get"},
+			Method: "EngineTest",
+			Router: `/user/hiserver/engine/test`,
+			AllowHTTPMethods: []string{"*"},
 			MethodParams: param.Make(),
 			Params: nil})
 
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Feedback",
-			Router: `/user/person/feedback`,
+			Router: `/user/hiserver/hiserver/person/feedback`,
+			AllowHTTPMethods: []string{"get"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
+		beego.ControllerComments{
+			Method: "Bind",
+			Router: `/user/hiserver/person/bind`,
+			AllowHTTPMethods: []string{"get"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
+		beego.ControllerComments{
+			Method: "GetOpenid",
+			Router: `/user/hiserver/person/getopenid`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
@@ -114,7 +130,7 @@ func init() {
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "MyPhoto",
-			Router: `/user/person/myPhoto`,
+			Router: `/user/hiserver/person/myPhoto`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
@@ -122,15 +138,15 @@ func init() {
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "PersonMsg",
-			Router: `/user/person/personMsg`,
-			AllowHTTPMethods: []string{"get"},
+			Router: `/user/hiserver/person/personMsg`,
+			AllowHTTPMethods: []string{"post"},
 			MethodParams: param.Make(),
 			Params: nil})
 
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "UnchTheClock",
-			Router: `/user/person/punchTheClock`,
+			Router: `/user/hiserver/person/punchTheClock`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
@@ -138,7 +154,7 @@ func init() {
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Tag",
-			Router: `/user/person/tag`,
+			Router: `/user/hiserver/person/tag`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
@@ -146,7 +162,7 @@ func init() {
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "WinningLog",
-			Router: `/user/person/winningLog`,
+			Router: `/user/hiserver/person/winningLog`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
@@ -154,7 +170,7 @@ func init() {
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "AutoPush",
-			Router: `/user/serve/autoPush`,
+			Router: `/user/hiserver/serve/autoPush`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
@@ -162,7 +178,7 @@ func init() {
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "CampusCard",
-			Router: `/user/serve/campusCard`,
+			Router: `/user/hiserver/serve/campusCard`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
@@ -170,7 +186,7 @@ func init() {
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Course",
-			Router: `/user/serve/course`,
+			Router: `/user/hiserver/serve/course`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
@@ -178,7 +194,7 @@ func init() {
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Score",
-			Router: `/user/serve/score`,
+			Router: `/user/hiserver/serve/score`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
@@ -186,7 +202,7 @@ func init() {
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "SelfStudyRoom",
-			Router: `/user/serve/selfStudyRoom`,
+			Router: `/user/hiserver/serve/selfStudyRoom`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
@@ -194,7 +210,7 @@ func init() {
 	beego.GlobalControllerRouter["hiServer/controllers:UserController"] = append(beego.GlobalControllerRouter["hiServer/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "TeacherMsg",
-			Router: `/user/serve/teacherMsg`,
+			Router: `/user/hiserver/serve/teacherMsg`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})

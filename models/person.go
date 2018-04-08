@@ -1,4 +1,9 @@
 package models
+
+import (
+	"github.com/astaxie/beego/orm"
+)
+
 //个人模块所需数据库
 
 //个人详情
@@ -24,7 +29,7 @@ type PersonMsg struct{
 type PunchTheClock struct{
 	Id int64
 	Date string
-	User *User `orm:"rel(one)"`
+	User *User `orm:"rel(fk)"`
 }
 
 //个人标签
@@ -43,14 +48,13 @@ type AchieveMsg struct{
 	User *User `orm:"rel(fk)"`
 }
 
-//成就奖品记录
-type WinningLog struct{
-	Id int64
-	Item string
-	Num int
-	Date string
+//消息通知
+type NoticeMsg struct{
+	Id int
+	Content string `orm:"type(text)"`
 	User *User `orm:"rel(fk)"`
 }
+
 
 //反馈信息
 type Feedback struct{
@@ -60,3 +64,7 @@ type Feedback struct{
 	User *User `orm:"rel(fk)"`
 }
 
+func (p *PersonMsg)PerosonMsgInsert()(int64,error){
+	o:=orm.NewOrm()
+	return o.Insert(p)
+}

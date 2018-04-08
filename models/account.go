@@ -24,10 +24,10 @@ type User struct{
 	WechatUser *WechatUser `orm:"rel(one)"`
 
 	PersonMsg *PersonMsg `orm:"reverse(one)"`
-	PunchTheClock *PunchTheClock `orm:"reverse(one)"`
+	PunchTheClock []*PunchTheClock `orm:"reverse(many)"`
 	Tag []*Tag `orm:"reverse(many)"`
 	AchieveMsg []*AchieveMsg `orm:"reverse(many)"`
-	WinningLog []*WinningLog `orm:"reverse(many)"`
+	NoticeMsg []*NoticeMsg `orm:"reverse(many)"`
 	Feedback []*Feedback `orm:"reverse(many)"`
 
 

@@ -17,6 +17,7 @@ func main() {
 		beego.BConfig.WebConfig.DirectoryIndex = true
 		beego.BConfig.WebConfig.StaticDir["/swagger"] = "swagger"
 	}
+	beego.SetStaticPath("/user/hiserver/test_pages","test_pages")
 	beego.Run()
 }
 

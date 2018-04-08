@@ -9,7 +9,11 @@ import (
 	"bufio"
 	"golang.org/x/net/html/charset"
 	"golang.org/x/text/encoding/unicode"
+	"net/url"
+	"github.com/astaxie/beego"
+	"net/http/cookiejar"
 )
+
 
 func Fetch(url string) ([]byte,error){
 	resp,err:=http.Get(url)
@@ -26,6 +30,28 @@ func Fetch(url string) ([]byte,error){
 	e:=determineDecoding(bodyReader)
 	utf8Reader:=transform.NewReader(bodyReader,e.NewDecoder())
 	return ioutil.ReadAll(utf8Reader)
+}
+
+func PostFetch(post_url string,account string,password string) ([]byte,error){
+	c:=&http.Client{}
+
+
+	postValues:=url.Values{}
+	postValues.Add("USERNAME",account)
+	postValues.Add("PASSWORD",password)
+	res,err:=c.PostForm(post_url,postValues)
+	cookie:=res.Cookies()
+	beego.Debug(res.Cookies())
+	if err!=nil{
+		beego.Error("error")
+	}
+	postURL,_ := url.Parse(post_url)
+	jar,_:= cookiejar.New(nil)
+	jar.SetCookies(postURL,cookie) //重新新建一个cookie文件
+	c.Jar=jar
+	res,_=c.Get("http://www.ccsu.cn/")
+	body,_:= ioutil.ReadAll(res.Body)
+	return body,nil
 }
 
 func determineDecoding(r *bufio.Reader)encoding.Encoding{

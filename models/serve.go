@@ -1,5 +1,8 @@
 package models
 
+import (
+	"github.com/astaxie/beego/orm"
+)
 
 //服务模块所需数据库
 
@@ -7,11 +10,11 @@ package models
 type Course struct{
 	Id int64
 	Order string
+	Weekday string
 	Name string
 	Class string
 	Teacher string
 	ExistWeek string
-	WeekDay string
 	Position string
 	Date string
 	User *User `orm:"rel(fk)"`
@@ -54,3 +57,18 @@ type Teacher struct{
 	Massage string
 }
 
+func (course *Course)Insert()(int64,error){
+	o:=orm.NewOrm()
+	return o.Insert(course)
+}
+
+
+func (course *Course)Updata()(int64,error){
+	o:=orm.NewOrm()
+	return o.Update(course)
+}
+
+func (course *Course)Delete()(int64,error){
+	o:=orm.NewOrm()
+	return o.Delete(course)
+}

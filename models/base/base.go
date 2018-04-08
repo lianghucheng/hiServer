@@ -19,7 +19,7 @@ func init(){
 		new(models.PunchTheClock),
 		new(models.Tag),
 		new(models.AchieveMsg),
-		new(models.WinningLog),
+		new(models.NoticeMsg),
 		new(models.Feedback),
 		new(models.Course),
 		new(models.Score),
@@ -34,7 +34,6 @@ func init(){
 		new(models.LuckDrawItems),
 		new(models.LuckDrawDetail),
 		new(models.PattedWorks),
-		new(models.PattedWorksDraw),
 		new(models.Secret),
 		new(models.Topic),
 		new(models.TechQuestion),
@@ -43,6 +42,8 @@ func init(){
 		new(models.Comment),
 		new(models.Praise),
 	)
+	_,dns:=getBase()
+	orm.RegisterDataBase("default","mysql",dns)
 }
 
 type dbConf struct{
@@ -53,7 +54,7 @@ type dbConf struct{
 	port string
 }
 
-func Syncdb(force bool){
+func getBase()(dbConf,string){
 	dbconf:=new(dbConf)
 	dbconf.user=beego.AppConfig.String("db_user")
 	dbconf.pass=beego.AppConfig.String("db_pass")
@@ -61,8 +62,13 @@ func Syncdb(force bool){
 	dbconf.host=beego.AppConfig.String("db_host")
 	dbconf.port=beego.AppConfig.String("db_port")
 	dns := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8",dbconf.user,dbconf.pass,dbconf.host,dbconf.port,dbconf.name)
+	return *dbconf,dns
+}
+
+func Syncdb(force bool){
+	dbconf,dns:=getBase()
 	createDb(dbconf.name,dns)
-	connect(dns)
+	connect()
 	o=orm.NewOrm()
 	name:="default"
 	verbose:=true
@@ -93,7 +99,6 @@ func createDb(db_name string,dns string){
 	db.Close()
 }
 
-func connect(dns string){
+func connect(){
 	orm.RegisterDriver("mysql",orm.DRMySQL)
-	orm.RegisterDataBase("default","mysql",dns)
 }

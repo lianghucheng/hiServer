@@ -26,8 +26,8 @@ type Active struct{
 //参加人员信息		主动或被动
 type JoinMsg struct{
 	Id int64
-	//阐述
-	//照片
+	Introduce string `orm:"size(255)"`
+	PhotoUrl string `orm:"null"`
 	IsCome int
 	Active *Active `orm:"rel(fk)"`
 	User *User `orm:"rel(fk)"`
@@ -84,18 +84,10 @@ type PattedWorks struct {//随拍
 	Author *User `orm:"rel(fk)"`
 	Comment []*Comment `orm:"reverse(many)"`
 	Praise []*Praise `orm:"reverse(many)"`
-	PattedWorksDraw *PattedWorksDraw `orm:"reverse(one)"`
 	Date string
 }
 
 //随拍奖励
-type PattedWorksDraw struct {
-	Id int
-	PattedWorks *PattedWorks `orm:"rel(one)"`
-	Item string
-	Num int
-	Date string
-}
 
 
 //秘密墙
